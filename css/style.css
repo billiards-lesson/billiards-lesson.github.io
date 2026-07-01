@@ -356,3 +356,12 @@ section { padding: 92px 0; position: relative; }
   .hero-actions { justify-content: center; }
   .hero-stats { justify-content: center; }
 }
+
+/* 가독성 개선: 본문 대비/줄간격 */
+:root { --text-2: #d7ddd9; --muted: #9ba7a1; }
+body { line-height: 1.7; }
+.hero p.lead { color: var(--text-2); font-size: clamp(16.5px, 1.6vw, 19px); line-height: 1.7; }
+.card p, .lesson-row p { line-height: 1.68; }
+@media (max-width: 900px) {
+  .hero p.lead { font-size: 17px; line-height: 1.72; }
+}
