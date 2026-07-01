@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /og.html
 
 # 네이버 검색로봇
 User-agent: Yeti
 Allow: /
+Disallow: /og.html
 
 Sitemap: https://heyjyu.github.io/billiards-lesson/sitemap.xml

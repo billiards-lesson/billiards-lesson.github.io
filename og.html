@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  * { margin:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; overflow:hidden; }
+  body {
+    font-family:"Pretendard",sans-serif; color:#eef2ef; position:relative;
+    background:
+      radial-gradient(900px 500px at 78% 30%, rgba(42,99,230,.35), transparent 60%),
+      radial-gradient(700px 500px at 10% 90%, rgba(230,184,98,.10), transparent 60%),
+      linear-gradient(135deg,#0b1018 0%,#0a0c11 60%);
+    display:flex; align-items:center; padding:0 76px;
+  }
+  .grain { position:absolute; inset:0; opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .left { position:relative; z-index:2; max-width:620px; }
+  .brand { display:flex; align-items:center; gap:16px; margin-bottom:38px; }
+  .ball { width:44px; height:44px; border-radius:50%;
+    background:radial-gradient(circle at 34% 30%,#fff 0 10%,#f0cd8a 30%,#e6b862 55%,#9c6f22 100%);
+    box-shadow:0 0 22px rgba(230,184,98,.4); }
+  .brand b { font-size:30px; font-weight:800; letter-spacing:-.02em; }
+  .brand small { display:block; font-size:13px; color:#8a968f; letter-spacing:.18em; font-weight:600; }
+  .eyebrow { display:inline-block; background:rgba(42,99,230,.12); color:#93b8ff;
+    border:1px solid rgba(42,99,230,.4); padding:9px 18px; border-radius:999px; font-size:19px; font-weight:700; margin-bottom:26px; }
+  h1 { font-size:66px; line-height:1.12; font-weight:800; letter-spacing:-.035em; }
+  h1 .g { background:linear-gradient(120deg,#f0cd8a,#e6b862); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { font-size:26px; color:#c5cdc8; margin-top:22px; font-weight:500; }
+  .phone { margin-top:34px; display:inline-flex; align-items:center; gap:12px; font-size:30px; font-weight:800;
+    background:#2a63e6; color:#fff; padding:14px 30px; border-radius:999px; box-shadow:0 12px 30px rgba(42,99,230,.4); }
+  .art { position:absolute; right:-40px; top:50%; transform:translateY(-50%); z-index:1; width:560px; height:560px; }
+</style></head>
+<body>
+  <div class="grain"></div>
+  <div class="left">
+    <div class="brand"><span class="ball"></span><span><b>미아 옵티머스24</b><small>OPTIMUS24 BILLIARDS</small></span></div>
+    <span class="eyebrow">🎱 미아역 도보 3분 · 강북 당구장</span>
+    <h1>제대로 배우는<br><span class="g">당구 레슨</span></h1>
+    <div class="sub">3구 개인레슨 · 시비시디스 대대 8대 · 심야 영업</div>
+    <div class="phone">📞 010-7758-1862</div>
+  </div>
+  <svg class="art" viewBox="0 0 440 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="felt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2f6ae0"/><stop offset="55%" stop-color="#1f52c6"/><stop offset="100%" stop-color="#123a9c"/></linearGradient>
+      <radialGradient id="spot" cx="42%" cy="26%" r="60%"><stop offset="0%" stop-color="#6a95ff" stop-opacity=".55"/><stop offset="70%" stop-color="#1f52c6" stop-opacity="0"/></radialGradient>
+      <radialGradient id="vig" cx="50%" cy="46%" r="62%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#04143f" stop-opacity=".8"/></radialGradient>
+      <linearGradient id="wood" x1="24" y1="392" x2="150" y2="250" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#3f2a12"/><stop offset="45%" stop-color="#a26f34"/><stop offset="70%" stop-color="#d8ab63"/><stop offset="100%" stop-color="#7c5326"/></linearGradient>
+      <radialGradient id="rball" cx="34%" cy="28%" r="78%"><stop offset="0%" stop-color="#ff8f80"/><stop offset="42%" stop-color="#e5372a"/><stop offset="100%" stop-color="#7f150e"/></radialGradient>
+      <radialGradient id="yball" cx="34%" cy="28%" r="78%"><stop offset="0%" stop-color="#ffeeb8"/><stop offset="42%" stop-color="#ecb84f"/><stop offset="100%" stop-color="#946716"/></radialGradient>
+      <radialGradient id="wball" cx="34%" cy="28%" r="78%"><stop offset="0%" stop-color="#ffffff"/><stop offset="55%" stop-color="#eaefec"/><stop offset="100%" stop-color="#9aa49d"/></radialGradient>
+    </defs>
+    <rect x="8" y="18" width="424" height="364" rx="28" fill="url(#felt)"/>
+    <rect x="8" y="18" width="424" height="364" rx="28" fill="url(#spot)"/>
+    <rect x="8" y="18" width="424" height="364" rx="28" fill="url(#vig)"/>
+    <rect x="8" y="18" width="424" height="364" rx="28" fill="none" stroke="#0e2c72" stroke-width="7"/>
+    <ellipse cx="152" cy="290" rx="30" ry="10" fill="#0a2160" opacity=".55"/>
+    <ellipse cx="262" cy="196" rx="30" ry="10" fill="#0a2160" opacity=".55"/>
+    <ellipse cx="312" cy="286" rx="30" ry="10" fill="#0a2160" opacity=".55"/>
+    <line x1="20" y1="394" x2="150" y2="252" stroke="url(#wood)" stroke-width="12" stroke-linecap="round"/>
+    <line x1="138" y1="265" x2="150" y2="252" stroke="#f4f1e8" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="150" cy="252" r="5.5" fill="#2a63e6"/>
+    <circle cx="255" cy="165" r="26" fill="url(#yball)"/><ellipse cx="246" cy="154" rx="8" ry="5.5" fill="#fff" opacity=".65"/>
+    <circle cx="312" cy="255" r="26" fill="url(#rball)"/><ellipse cx="303" cy="244" rx="8" ry="5.5" fill="#fff" opacity=".5"/>
+    <circle cx="168" cy="258" r="26" fill="url(#wball)"/><ellipse cx="159" cy="247" rx="8" ry="5.5" fill="#fff" opacity=".85"/>
+    <path d="M190 250 Q225 205 250 180" stroke="#fff" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" fill="none" opacity=".45"/>
+  </svg>
+</body></html>
