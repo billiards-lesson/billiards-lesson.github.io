@@ -343,3 +343,7 @@ section { padding: 92px 0; position: relative; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
   -webkit-text-stroke: 0; letter-spacing: 0; line-height: 1; font-style: italic;
 }
+
+/* 요금 2카드: 데스크톱 가로, 모바일 세로 */
+.price-grid-2 { max-width: 760px; margin: 0 auto; grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 860px) { .price-grid-2 { grid-template-columns: 1fr; max-width: 420px; } }
