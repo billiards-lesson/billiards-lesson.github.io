@@ -254,15 +254,11 @@
       <p>이름·연락처·문의 내용을 남겨주시면 확인 후 빠르게 연락드립니다.</p>
     </div>
 
-    <!-- ▼ FormSubmit: action의 이메일을 실제 받을 주소로 바꾸면 그 메일로 신청이 전송됩니다.
-         (첫 신청 1회는 FormSubmit이 보낸 확인메일의 링크를 눌러 활성화해야 함) -->
-    <form class="form-card contact-form" action="https://formsubmit.co/ansgud1862@gmail.com" method="POST">
-      <!-- 설정용 숨김 필드 -->
-      <input type="hidden" name="_subject" value="[미아옵티머스당구아카데미] 새 상담신청">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://heyjyu.github.io/billiards-lesson/index.html?sent=1#contact">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <!-- ▼ Netlify Forms (무료 월 100건). Netlify에 배포하면 자동 작동.
+         받은 신청 = Netlify 대시보드 → Forms → "contact" 에 쌓임 + 이메일 알림(대시보드에서 설정). -->
+    <form class="form-card contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?sent=1#contact">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden aria-hidden="true"><label>이 칸은 비워두세요 <input name="bot-field"></label></p>
 
       <div class="form-row">
         <label for="name">작성자 <span class="req">*</span></label>
