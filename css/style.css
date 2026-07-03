@@ -407,3 +407,16 @@ h1, h2, h3, h4, p, .btn, .eyebrow, .tag, .amount, .stat span, .price-card .desc 
 .gallery figure::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 60%,rgba(4,10,20,.5)); pointer-events:none; }
 .gallery figcaption { position:absolute; left:14px; bottom:11px; z-index:2; color:#fff; font-size:13.5px; font-weight:700; letter-spacing:.01em; text-shadow:0 1px 5px rgba(0,0,0,.6); }
 @media (max-width:860px){ .gallery { grid-template-columns:repeat(2,1fr); gap:10px; } .gallery figcaption{ font-size:12.5px; } }
+
+/* ---------- 네이버 지도 카드 (키 없이 클릭→네이버) ---------- */
+.map-card { display:block; aspect-ratio:4/3; border-radius:var(--radius); border:1px solid var(--line); overflow:hidden; position:relative;
+  background:radial-gradient(700px 300px at 50% 20%, rgba(42,99,230,.16), transparent 60%), linear-gradient(160deg,#12203a,#0d1524); transition:border-color .2s, transform .18s var(--ease); }
+.map-card:hover { border-color:var(--line-2); transform:translateY(-2px); }
+.map-card .pin { position:absolute; top:40%; left:50%; transform:translate(-50%,-50%); color:#ff5a4d; }
+.map-card .pin [data-lucide] { width:46px; height:46px; stroke-width:2; filter:drop-shadow(0 6px 12px rgba(0,0,0,.5)); }
+.map-card .pin::after { content:""; position:absolute; left:50%; bottom:-9px; transform:translateX(-50%); width:26px; height:7px; border-radius:50%; background:rgba(0,0,0,.4); }
+.map-card .info { position:absolute; left:0; right:0; bottom:0; padding:18px 20px; background:linear-gradient(180deg,transparent,rgba(4,10,20,.9)); }
+.map-card .info b { display:block; color:#fff; font-size:15.5px; }
+.map-card .info span { display:block; color:var(--text-2); font-size:13px; margin-top:3px; }
+.map-card .open { display:inline-flex; align-items:center; gap:7px; margin-top:12px; background:#03c75a; color:#fff; font-weight:800; font-size:13.5px; padding:9px 16px; border-radius:999px; }
+.map-card .open [data-lucide] { width:15px; height:15px; }
