@@ -408,6 +408,18 @@ h1, h2, h3, h4, p, .btn, .eyebrow, .tag, .amount, .stat span, .price-card .desc 
 .gallery figcaption { position:absolute; left:14px; bottom:11px; z-index:2; color:#fff; font-size:13.5px; font-weight:700; letter-spacing:.01em; text-shadow:0 1px 5px rgba(0,0,0,.6); }
 @media (max-width:860px){ .gallery { grid-template-columns:repeat(2,1fr); gap:10px; } .gallery figcaption{ font-size:12.5px; } }
 
+/* ---------- 갤러리 라이트박스 ---------- */
+.lightbox { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; background:rgba(4,8,16,.9); backdrop-filter:blur(4px); padding:56px 20px; }
+.lightbox.open { display:flex; }
+.lightbox img { max-width:min(1100px,92vw); max-height:86vh; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.6); }
+.lightbox .lb-cap { position:absolute; left:0; right:0; bottom:22px; text-align:center; color:#fff; font-size:15px; font-weight:700; text-shadow:0 1px 6px rgba(0,0,0,.7); pointer-events:none; }
+.lightbox .lb-close { position:absolute; top:16px; right:20px; width:44px; height:44px; border:none; border-radius:50%; background:rgba(255,255,255,.12); color:#fff; font-size:30px; line-height:1; cursor:pointer; }
+.lightbox .lb-close:hover { background:rgba(255,255,255,.22); }
+.lightbox .lb-nav { position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px; border:none; border-radius:50%; background:rgba(255,255,255,.12); color:#fff; font-size:34px; line-height:1; cursor:pointer; }
+.lightbox .lb-nav:hover { background:rgba(255,255,255,.22); }
+.lightbox .lb-prev { left:18px; } .lightbox .lb-next { right:18px; }
+@media (max-width:860px){ .lightbox { padding:48px 8px; } .lightbox .lb-nav { width:44px; height:44px; font-size:28px; } .lightbox .lb-prev{left:8px;} .lightbox .lb-next{right:8px;} }
+
 /* ---------- 네이버 지도 카드 (키 없이 클릭→네이버) ---------- */
 .map-card { display:block; aspect-ratio:4/3; border-radius:var(--radius); border:1px solid var(--line); overflow:hidden; position:relative;
   background:radial-gradient(700px 300px at 50% 20%, rgba(42,99,230,.16), transparent 60%), linear-gradient(160deg,#12203a,#0d1524); transition:border-color .2s, transform .18s var(--ease); }
