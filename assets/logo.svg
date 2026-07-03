@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="미아옵티머스당구아카데미 3구 로고">
+  <defs>
+    <radialGradient id="lg-w" cx="38%" cy="30%" r="72%">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="60%" stop-color="#f4f1ea"/><stop offset="100%" stop-color="#d9d3c4"/>
+    </radialGradient>
+    <radialGradient id="lg-y" cx="36%" cy="30%" r="74%">
+      <stop offset="0%" stop-color="#ffe9ad"/><stop offset="50%" stop-color="#e6b445"/><stop offset="100%" stop-color="#b9862a"/>
+    </radialGradient>
+    <radialGradient id="lg-r" cx="36%" cy="30%" r="74%">
+      <stop offset="0%" stop-color="#e8756a"/><stop offset="48%" stop-color="#cf3b2f"/><stop offset="100%" stop-color="#9a271f"/>
+    </radialGradient>
+  </defs>
+  <!-- 뒤: 노랑(좌) → 빨강(우) → 흰(위) 순서로 겹침 -->
+  <g stroke="#141414" stroke-width="6">
+    <circle cx="43" cy="76" r="27" fill="url(#lg-y)"/>
+    <ellipse cx="34" cy="65" rx="8" ry="5.5" fill="#fff" opacity=".5" stroke="none"/>
+    <circle cx="80" cy="76" r="27" fill="url(#lg-r)"/>
+    <ellipse cx="71" cy="65" rx="8" ry="5.5" fill="#fff" opacity=".38" stroke="none"/>
+    <circle cx="61" cy="44" r="28" fill="url(#lg-w)"/>
+    <ellipse cx="51" cy="32" rx="9" ry="6" fill="#fff" opacity=".9" stroke="none"/>
+  </g>
+</svg>
